@@ -80,6 +80,13 @@ button {
     border: 3px solid black;
 }
 
+.level {
+    font-size: 30px;
+    margin-top: -15px;
+    margin-bottom: -15px;
+    font-family: 'Road Rage', cursive;
+}
+
 .green-active {
     background-color: #00a000;
 }

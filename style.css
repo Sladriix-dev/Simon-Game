@@ -1,17 +1,25 @@
 body {
     text-align: center;
     background-size: cover;
-    font-family: ;
     background-image: url();
 }
 
-.color, #level {
+.color {
     width: 300px;
     height: 300px;
     display: inline-block;
     align-content: center;
     border : 5px solid black;
-    box-shadow: 10px 10px 10px black;
+    box-shadow: 30px 10px 10px black;
+}
+
+#level {
+    width: 300px;
+    height: 300px;
+    display: inline-block;
+    align-content: center;
+    border : 5px solid black;
+    box-shadow: 15px 10px 10px black;
 }
 
 .color:hover, button {
@@ -43,17 +51,32 @@ body {
 }
 
 button {
-    margin: 0 0 0 0;
+    padding: 10px;
+    font-size: 15px;
     text-align: center;
     border-radius: 15px;
     border: 3px solid black;
+    margin: 10px 0px 15px 0px;
+}
+
+.play-button {
+    font-size: 30px;
+    margin-right: 35px !important;
+    font-family: 'Road Rage', cursive;
+}
+
+.reset-button {
+    font-size: 30px;
+    margin-left: 35px !important;
+    font-family: 'Road Rage', cursive;
 }
 
 #level {
     width: 50px;
     height: 50px;
     font-size: large;
-    background-color: pink;
+    display: inline-grid;
+    background-color: white;
     border: 3px solid black;
 }
 
@@ -74,13 +97,17 @@ button {
 }
 
 .rules-button {
-    border: none;
-    color: white;
+    color: black;
     cursor: pointer;
     font-size: 15px;
+    background: white;
     border-radius: 10px;
-    background: linear-gradient(#780202, #023D77);
-    font-family: ;
+    padding: 15px 15px 15px 15px;
+}
+
+.rules-button:hover {
+    color: white;
+    background: black;
 }
 
 #rules {
@@ -93,8 +120,8 @@ button {
 }
 
 #rules h1 {
-    padding: 15px;
-    font-size: 30px;
+    font-size: 50px;
+    margin-top: -30px;
 } 
 
 .ul-rule {
@@ -104,11 +131,11 @@ button {
 }
 
 .li-rule {
-    padding-bottom: 30px;
+    padding-bottom: 10px;
 }
 
 #rules-text {
-    margin: auto;
+    margin: 150px auto;
     width: 700px;
     height: 300px;
     line-height: 150%;
@@ -123,4 +150,48 @@ button {
 
 .disable {
     pointer-events: none;
+}
+
+.header {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.exit-button {
+    color: black;
+    font-size: 10px;
+    margin-left: 575px;
+    background: white;
+}
+
+.exit-button:hover {
+    color: white;
+    background: black;
+}
+
+.buttons {
+    margin-top: -55px;
+}
+
+.play-button:hover {
+    color: white;
+    background: black;
+}
+
+.reset-button:hover {
+    color: white;
+    background: black;
+}
+
+h1 {
+    font-family: 'Road Rage', cursive;
+}
+
+.title {
+    z-index: 1;
+    font-size: 75px;
+    margin-left: 75px;
+    margin-bottom: -55px;
 }

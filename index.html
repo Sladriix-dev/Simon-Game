@@ -7,29 +7,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Road+Rage&display=swap" rel="stylesheet">
     <title>IPSSI JS - SUPER SIMON</title>
 </head>
 
 <body>
-    <h1> SUPER SIMON </h1>
-    <button id="open-rules" class="rules-button"> Règles du jeu ! </button>
+    <div class="header">
+        <h1 class="title"> SUPER SIMON </h1>
+        <button id="open-rules" class="rules-button"> ? </button>
+    </div>
     <div id="rules">
         <div id="rules-text">
-            <h1> But du jeu : </h1>
-            <ul class="ul-rule"> Répéter une séquence de lumières de plus en plus longue ! </ul>
-            <li> Une touche s'allume et émet un bip : appuyez sur cette touche. </li>
-            <li> La même touche s'allume et bip, puis Super Simon ajoute une nouvelle touche : appuyez sur ces deux
-                touches l'une après l'autre. </li>
-            <li class="li-rule"> ... et ainsi de suite jusqu'à ce que vous vous trompiez, ou que vous battiez Super
-                Simon ! J'effectue un test</li>
-            <div id="rules-footer">
-                <button id="close" class="rules-button" href="#"> Fermer </button>
-            </div>
+            <button id="close" class="exit-button" href="#">X</button>
+            <h1>But du jeu :</h1>
+            <ul class="ul-rule">Répéter une séquence de lumières de plus en plus longue !</ul>
+            <li>Une touche s'allume et émet un bip : appuyez sur cette touche.</li>
+            <li>La même touche s'allume et bip, puis Super Simon ajoute une nouvelle touche : appuyez sur ces deux
+                touches l'une après l'autre.</li>
+            <li class="li-rule">... et ainsi de suite jusqu'à ce que vous vous trompiez, ou que vous battiez Super
+                Simon !</li>
         </div>
     </div>
     <div class="buttons">
-        <button id="start"> Jouer </button>
-        <button id="reset"> Recommencer </button>
+        <button id="start" class="play-button"> Jouer </button>
+        <button id="reset" class="reset-button"> Reset </button>
     </div>
     <div id="level"></div>
     <div class="level">

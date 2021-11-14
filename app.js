@@ -191,27 +191,3 @@ const closeRules = () => {
     rules.style.display = 'none'
 };
 
-function onAddUserClick(isClickable = true) {
-    const classNames = document.getElementsByClassName('color');
-    if (isClickable) {
-        alert ('Votre tour')
-        for (let i = 0; i < classNames.length; i++) {
-            classNames[i].addEventListener('click', onHandleUserAction, false);
-        }
-    } else {
-        onDisplayTurn("Au tour de l'ordinateur");
-        for (let i = 0; i < classNames.length; i++) {
-            classNames[i].addEventListener('click', onHandleUserAction, false);
-        }
-    }
-};
-
-function onHandleUserAction(event) {
-    const id = parseInt(event.target.id);
-    const color = event.target.className.split(' ')[1];
-    activateColor(id, color);
-};
-
-function onDisplayTurn(turn) {
-    document.querySelector('.player-turn span').innerText = turn;
-};

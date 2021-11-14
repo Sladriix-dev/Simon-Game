@@ -72,3 +72,45 @@ button {
 .yellow-active {
     background-color: lightyellow;
 }
+
+.rules-button {
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 50px;
+    background-color: pink;
+    font-family: ;
+}
+
+#rules {
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: none;
+    overflow: auto;
+    position: fixed;
+    background-color: pink;
+}
+
+#rules-text {
+    width: 555px;
+    height: 333px;
+    line-height: 111%;
+    margin: 150px auto;
+    border-radius: 3px;
+    background-color: white;
+    box-shadow: 0 3px 3px black;
+
+}
+
+#rules-footer {
+    text-align: right;
+}
+
+.disable {
+    pointer-events: none;
+}

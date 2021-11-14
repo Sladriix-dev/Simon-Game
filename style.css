@@ -75,12 +75,11 @@ button {
 
 .rules-button {
     border: none;
-    outline: none;
     color: white;
     cursor: pointer;
     font-size: 15px;
-    border-radius: 50px;
-    background-color: pink;
+    border-radius: 10px;
+    background: linear-gradient(#780202, #023D77);
     font-family: ;
 }
 
@@ -90,25 +89,36 @@ button {
     z-index: 1;
     width: 100%;
     height: 100%;
-    display: none;
-    overflow: auto;
     position: fixed;
-    background-color: pink;
+}
+
+#rules h1 {
+    padding: 15px;
+    font-size: 30px;
+} 
+
+.ul-rule {
+    font-size: 17px;
+    padding-bottom: 10px;
+    text-decoration: underline;
+}
+
+.li-rule {
+    padding-bottom: 30px;
 }
 
 #rules-text {
-    width: 555px;
-    height: 333px;
-    line-height: 111%;
-    margin: 150px auto;
-    border-radius: 3px;
+    margin: auto;
+    width: 700px;
+    height: 300px;
+    line-height: 150%;
+    border-radius: 35px;
     background-color: white;
-    box-shadow: 0 3px 3px black;
-
+    box-shadow: 0 0 10px 5px black;
 }
 
 #rules-footer {
-    text-align: right;
+    text-align: center;
 }
 
 .disable {

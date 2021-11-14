@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <script src="./app.js"></script>
     <title>IPSSI JS - SUPER SIMON</title>
 </head>
 
@@ -17,10 +16,10 @@
     <div id="rules">
         <div id="rules-text">
             <h1> But du jeu : </h1>
-            <p> Répéter une séquence de lumières de plus en plus longue. </p>
-            <p> Une touche s'allume et émet un bip. Appuyez sur cette touche. </p>
-            <p> La même touche s'allume et bip. Puis Super Simon ajoute une nouvelle touche. Appuyez sur ces deux touches l'une après l'autre. </p>
-            <p> ... et ainsi de suite jusqu'à ce que vous vous tromppiez, ou que vous battiez Super Simon ! </p>    
+            <ul class="ul-rule"> Répéter une séquence de lumières de plus en plus longue ! </ul>
+            <li> Une touche s'allume et émet un bip : appuyez sur cette touche. </li>
+            <li> La même touche s'allume et bip, puis Super Simon ajoute une nouvelle touche : appuyez sur ces deux touches l'une après l'autre. </li>
+            <li class="li-rule"> ... et ainsi de suite jusqu'à ce que vous vous trompiez, ou que vous battiez Super Simon ! </li>    
             <div id="rules-footer">
                 <button id="close" class="rules-button" href="#"> Fermer </button>
             </div>
@@ -42,6 +41,7 @@
         <div id="3" class="color blue"></div>
         <div id="4" class="color yellow"></div>
     </div>
+    <script src="./app.js"></script>
 </body>
 
 </html>

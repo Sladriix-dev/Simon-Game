@@ -41,13 +41,13 @@ body {
 .blue {
     margin: 0 0 0 0;
     background-color: blue;
-    border-bottom-left-radius: 300px;
+    border-bottom-right-radius: 300px;
 }
 
 .yellow {
     margin: 0 0 0 0;
     background-color: yellow;
-    border-bottom-right-radius: 300px;
+    border-bottom-left-radius: 300px;
 }
 
 button {
@@ -81,19 +81,19 @@ button {
 }
 
 .green-active {
-    background-color: lightgreen;
+    background-color: #00a000;
 }
 
 .red-active {
-    background-color: tomato;
+    background-color: #FF4040;
 }
 
 .blue-active {
-    background-color: lightblue;
+    background-color: #4040FF;
 }
 
 .yellow-active {
-    background-color: lightyellow;
+    background-color: #FFF440;
 }
 
 .rules-button {

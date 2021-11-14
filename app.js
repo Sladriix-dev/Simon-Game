@@ -1,10 +1,10 @@
 // Initialisation des boutons
 const startBtn = document.querySelector('#start')
+const reset = document.querySelector('#reset');
 const green = document.querySelector('.green')
 const red = document.querySelector('.red')
 const yellow = document.querySelector('.yellow')
 const blue = document.querySelector('.blue')
-const reset = document.querySelector('#reset');
 const roundCount = document.querySelector('#level')
 
 let player = [];
@@ -12,15 +12,15 @@ let simon = [];
 let rounds = 0;
 let color;
 let id;
-let totalRounds = 20
+let totalRounds = 20;
 let soundEffects = [
     "https://s3.amazonaws.com/freecodecamp/simonSound1.mp3", // Green
     "https://s3.amazonaws.com/freecodecamp/simonSound2.mp3", // Red
     "https://s3.amazonaws.com/freecodecamp/simonSound3.mp3", // Yellow
     "https://s3.amazonaws.com/freecodecamp/simonSound4.mp3", // Blue
-]
+];
 
-// Cette function commence après avoir cliqué sur le bouton start et check le nombre aléatoire qui a été ajouté au tableau simons
+// Cette function commence après avoir cliqué sur le bouton start et check le nombre aléatoire qui a été ajouté au tableau Simon
 const simonSequence = () => {
     startBtn.setAttribute('disabled', 'disabled');
     rounds++
@@ -48,25 +48,25 @@ const simonSequence = () => {
         if (simon.length === i) {
             clearTimeout(interval)
         }
-    }, 800)
-}
+    }, 1000)
+};
 
-// Génère un nombre random a chaque fois que la fonction est appelé et l'ajoute dans le tableau simons
+// Génère un nombre aléatoire a chaque fois que la fonction est appelée et l'ajoute dans le tableau Simon
 const randomNumber = () => {
     let random = Math.floor(Math.random() * 4)
     simon.push(random)
-}
+};
 
-// Ajout d'une couleur plus claire après un clique
+// Ajout d'une couleur plus claire après un clic
 const activateColor = (id, color) => {
     document.getElementById(id).classList.add(color + '-active')
     playSound(id)
     setTimeout(() => {
         document.getElementById(id).classList.remove(color + '-active')
-    }, 500);
-}
+    }, 500)
+};
 
-// Vérifie la séquence du joueur après chaque click
+// Vérifie la séquence du joueur après chaque clic
 const playerSequence = () => {
     if (checkSequence() === false) {
         wrongColor()
@@ -75,12 +75,12 @@ const playerSequence = () => {
         simonSequence()
         player = []
     } if (player.length === totalRounds) {
-        alert('Vous avez gagné !')
+        alert('Bravo ! Vous avez vaincu Simon.')
         resetGame()
     }
-}
+};
 
-// Vérifie si l'array simon est le meme que celui du joueur
+// Vérifie si l'array Simon est le meme que celui du joueur
 const checkSequence = () => {
     for (let i = 0; i < player.length; i++) {
         if (player[i] != simon[i]) {
@@ -88,7 +88,7 @@ const checkSequence = () => {
         }
     }
     return true
-}
+};
 
 // Reset le jeu
 const resetGame = () => {
@@ -97,22 +97,22 @@ const resetGame = () => {
     rounds = 0
     roundCount.innerHTML = rounds
     startBtn.removeAttribute('disabled', 'disabled')
-}
+};
 
-// Click sur la mauvaise couleur
+// Clic sur la mauvaise couleur
 const wrongColor = () => {
     let wrong = setInterval(() => {
-        alert('OUPS!!! Vous avez cliqué sur la mauvaise couleur ! Recommencez')
+        alert('Game over ! Try again.')
         resetGame()
         clearInterval(wrong)
     }, 150)
-}
+};
 
-// Sound function
+// Son
 const playSound = (id) => {
     let sound = new Audio(soundEffects[id])
     sound.play()
-}
+};
 
 
 /////// Event listeners //////////
@@ -185,16 +185,16 @@ window.addEventListener('DOMContentLoaded', () => {
 
 const openRules = () => {
     rules.style.display = 'block'
-}
+};
 
 const closeRules = () => {
     rules.style.display = 'none'
-}
+};
 
 function onAddUserClick(isClickable = true) {
     const classNames = document.getElementsByClassName('color');
     if (isClickable) {
-        onDisplayTurn('Votre tour')
+        alert ('Votre tour')
         for (let i = 0; i < classNames.length; i++) {
             classNames[i].addEventListener('click', onHandleUserAction, false);
         }
@@ -204,14 +204,14 @@ function onAddUserClick(isClickable = true) {
             classNames[i].addEventListener('click', onHandleUserAction, false);
         }
     }
-}
+};
 
 function onHandleUserAction(event) {
     const id = parseInt(event.target.id);
     const color = event.target.className.split(' ')[1];
     activateColor(id, color);
-}
+};
 
 function onDisplayTurn(turn) {
     document.querySelector('.player-turn span').innerText = turn;
-}
+};

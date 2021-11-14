@@ -114,3 +114,79 @@ const playSound = (id) => {
     sound.play();
 }
 
+
+/////// Event listeners //////////
+
+window.addEventListener('DOMContentLoaded', () => {
+    //Rules
+    const openBtn = document.querySelector('#open-rules');
+    const rules = document.querySelector('#rules');
+    const closeBtn = document.querySelector('#close');
+    openBtn.addEventListener('click', openRules);
+    closeBtn.addEventListener('click', closeRules);
+
+    // Start & Reset
+    startBtn.addEventListener('click', simonSequence);
+    reset.addEventListener('click', resetGame);
+
+    // Green
+    green.addEventListener('click', () => {
+        id = green.getAttribute('id');
+        color = green.getAttribute('class').split(' ')[1];
+        green.classList.add('color' + '-active');
+        setTimeout(() => {
+            green.classList.remove(color + '-active');
+        }, 300);
+        player.push(parseInt(id));
+        activateColor(id, color);
+        playerSequence();
+    });
+
+    // Red
+    red.addEventListener('click', () => {
+        id = red.getAttribute('id');
+        color = red.getAttribute('class').split(' ')[1];
+        red.classList.add('color' + '-active');
+        setTimeout(() => {
+            red.classList.remove(color + '-active');
+        }, 300);
+        player.push(parseInt(id));
+        activateColor(id, color);
+        playerSequence();
+    });
+
+    // Yellow
+    yellow.addEventListener('click', () => {
+        id = yellow.getAttribute('id');
+        color = yellow.getAttribute('class').split(' ')[1];
+        yellow.classList.add('color' + '-active');
+        setTimeout(() => {
+            yellow.classList.remove(color + '-active');
+        }, 300);
+        player.push(parseInt(id));
+        activateColor(id, color);
+        playerSequence();
+    });
+
+    // Blue
+    blue.addEventListener('click', () => {
+        id = blue.getAttribute('id');
+        color = blue.getAttribute('class').split(' ')[1];
+        blue.classList.add('color' + '-active');
+        setTimeout(() => {
+            blue.classList.remove(color + '-active');
+        }, 300);
+        player.push(parseInt(id));
+        activateColor(id, color);
+        playerSequence();
+    });
+
+});
+
+const openRules = () => {
+    rules.style.display = 'block';
+}
+
+const closeRules = () => {
+    rules.style.display = 'none';
+}

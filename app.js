@@ -13,6 +13,12 @@ let rounds = 0;
 let color;
 let id;
 let totalRounds = 20;
+let soundEffects = [
+    "https://s3.amazonaws.com/freecodecamp/simonSound1.mp3", // Green
+    "https://s3.amazonaws.com/freecodecamp/simonSound2.mp3", // Red
+    "https://s3.amazonaws.com/freecodecamp/simonSound3.mp3", // Yellow
+    "https://s3.amazonaws.com/freecodecamp/simonSound4.mp3", // Blue
+]
 
 // Cette function commence après avoir cliqué sur le bouton start et check le nombre aléatoire qui a été ajouté au tableau simons
 const simonSequence = () => {

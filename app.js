@@ -29,16 +29,16 @@ const simonSequence = () => {
     let i = 0;
     let interval = setInterval(() => {
         id = simon[i]
-        if (id === 0) {
+        if (id === 1) {
             color = document.querySelector('.green').getAttribute('class').split(' ')[1];
         }
-        else if (id === 1) {
+        else if (id === 2) {
             color = document.querySelector('.red').getAttribute('class').split(' ')[1];
         }
-        else if (id === 2) {
+        else if (id === 3) {
             color = document.querySelector('.yellow').getAttribute('class').split(' ')[1];
         }
-        else if (id === 3) {
+        else if (id === 4) {
             color = document.querySelector('.blue').getAttribute('class').split(' ')[1];
         } else {
             return

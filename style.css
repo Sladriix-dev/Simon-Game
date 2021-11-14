@@ -33,13 +33,13 @@ body {
 .blue {
     margin: 0 0 0 0;
     background-color: blue;
-    border-bottom-right-radius: 300px;
+    border-bottom-left-radius: 300px;
 }
 
 .yellow {
     margin: 0 0 0 0;
     background-color: yellow;
-    border-bottom-left-radius: 300px;
+    border-bottom-right-radius: 300px;
 }
 
 button {

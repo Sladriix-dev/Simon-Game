@@ -56,3 +56,61 @@ const randomNumber = () => {
     let random = Math.floor(Math.random() * 4);
     simon.push(random);
 }
+
+// Ajout d'une couleur plus claire après un clique
+const activateColor = (id, color) => {
+    document.getElementById(id).classList.add(color + '-active');
+    playSound(id);
+    setTimeout(() => {
+        document.getElementById(id).classList.remove(color + '-active');
+    }, 500);
+}
+
+// Vérifie la séquence du joueur après chaque click
+const playerSequence = () => {
+    if (checkSequence() === false) {
+        wrongColor();
+        simonSequence();
+    } else if (player.length === simon.length && player.length < totalRounds) {
+        simonSequence();
+        player = [];
+    } if (player.length === totalRounds) {
+        alert('Vous avez gagné !')
+        resetGame();
+    }
+}
+
+// Vérifie si l'array simon est le meme que celui du joueur
+const checkSequence = () => {
+    for (let i = 0; i < player.length; i++) {
+        if (player[i] != simon[i]) {
+            return false
+        }
+    }
+    return true
+}
+
+// Reset le jeu
+const resetGame = () => {
+    player = [];
+    simon = [];
+    rounds = 0;
+    roundCount.innerHTML = rounds;
+    startBtn.removeAttribute('disabled', disabled);
+}
+
+// Click sur la mauvaise couleur
+const wrongColor = () => {
+    let wrong = setInterval(() => {
+        alert('OUPS!!! Vous avez cliqué sur la mauvaise couleur ! Recommencez')
+        resetGame();
+        clearInterval(wrong);
+    }, 150)
+}
+
+// Sound function
+const playSound = (id) => {
+    let sound = new Audio(soundEffects[id]);
+    sound.play();
+}
+

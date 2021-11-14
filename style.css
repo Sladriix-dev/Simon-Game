@@ -28,25 +28,25 @@ body {
 
 .green {
     margin: 0 0 0 0;
-    background-color: green;
+    background-color: #006600;
     border-top-left-radius: 300px;
 }
 
 .red {
     margin: 0 0 0 0;
-    background-color: red;
+    background-color: #cc0000;
     border-top-right-radius: 300px;
 }
 
 .blue {
     margin: 0 0 0 0;
-    background-color: blue;
+    background-color: #0000cc;
     border-bottom-right-radius: 300px;
 }
 
 .yellow {
     margin: 0 0 0 0;
-    background-color: yellow;
+    background-color: #cccc00;
     border-bottom-left-radius: 300px;
 }
 

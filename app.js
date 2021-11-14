@@ -5,7 +5,7 @@ const red = document.querySelector('.red');
 const yellow = document.querySelector('.yellow');
 const blue = document.querySelector('.blue');
 const reset = document.querySelector('#reset');
-const roundCount = document.querySelector('#round')
+const roundCount = document.querySelector('#level')
 
 let player = [];
 let simon = [];
@@ -45,7 +45,7 @@ const simonSequence = () => {
     }, 800)
 }
 
-// Génère un nombre random a chaque fois que la fonction est appelé et l'ajoute de le tableau simons
+// Génère un nombre random a chaque fois que la fonction est appelé et l'ajoute dans le tableau simons
 const randomNumber = () => {
     let random = Math.floor(Math.random() * 4);
     simon.push(random);

@@ -1,0 +1,74 @@
+body {
+    text-align: center;
+    background-size: cover;
+    font-family: ;
+    background-image: url();
+}
+
+.color, #level {
+    width: 300px;
+    height: 300px;
+    display: inline-block;
+    align-content: center;
+    border : 5px solid black;
+    box-shadow: 10px 10px 10px black;
+}
+
+.color:hover, button {
+    cursor: pointer;
+}
+
+.green {
+    margin: 0 0 0 0;
+    background-color: green;
+    border-top-left-radius: 300px;
+}
+
+.red {
+    margin: 0 0 0 0;
+    background-color: red;
+    border-top-right-radius: 300px;
+}
+
+.blue {
+    margin: 0 0 0 0;
+    background-color: blue;
+    border-bottom-right-radius: 300px;
+}
+
+.yellow {
+    margin: 0 0 0 0;
+    background-color: yellow;
+    border-bottom-left-radius: 300px;
+}
+
+button {
+    margin: 0 0 0 0;
+    text-align: center;
+    border-radius: 15px;
+    border: 3px solid black;
+}
+
+#level {
+    width: 50px;
+    height: 50px;
+    font-size: large;
+    background-color: pink;
+    border: 3px solid black;
+}
+
+.green-active {
+    background-color: lightgreen;
+}
+
+.red-active {
+    background-color: tomato;
+}
+
+.blue-active {
+    background-color: lightblue;
+}
+
+.yellow-active {
+    background-color: lightyellow;
+}
